@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/*  [PESQUISAR] Typical DEvice Breakpoints [tamanho das telas]
+*/
+
+@media print {/* IMPRESSÃO */
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg); /* desnecessário */
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+        text-align: center;
+    }
+
+    main::after {
+        content: 'Criado por Curso em Vídeo';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    #phone { display: none;}
+
+    #tablet { display: none;}
+
+    #pc { display: none;}
+
+    #impressora { display: block;}
+
+    #tv { display: none;}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) { /* TABLET */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    #phone { display: none;}
+
+    #tablet { display: block;}
+
+    #pc { display: none;}
+
+    #impressora { display: none;}
+
+    #tv { display: none;}
+    
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){ /* DEKSTOP */
+
+    #phone { display: none;}
+
+    #tablet { display: none;}
+
+    #pc { display: block;}
+
+    #impressora { display: none;}
+
+    #tv { display: none;}
+}
+
+@media screen and (min-width: 1201px) { /* GRANDES TELAS */ 
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    #phone { display: none;}
+
+    #tablet { display: none;}
+
+    #pc { display: none;}
+
+    #impressora { display: none;}
+
+    #tv { display: block;}
+}
+
